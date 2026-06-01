@@ -67,7 +67,7 @@ The repository contains the main outputs generated from the study:
 
 Several classification models were evaluated to identify hospitals at higher risk of excessive readmissions. Candidate models include Logistic Regression, Random Forest, Gradient Boosting, SVM with RBF kernel, XGBoost, Explainable Boosting Machine (EBM), and a stacking ensemble.
 
-Based on the exported cross-validation results in `model_cv_results.csv`, the EBM produced the strongest mean ROC-AUC among the tested approaches in the current experiment. Logistic Regression performed closely behind EBM, while tree-based ensemble and SVM models provided additional comparison points.
+Based on the exported cross-validation results in `model_cv_results.csv`, the EBM produced the strongest mean ROC-AUC among the tested approaches in the current experiment, achieving an **AUC-ROC of 0.729** while preserving full model interpretability. Logistic Regression performed closely behind EBM, while tree-based ensemble and SVM models provided additional comparison points.
 
 The current workflow also includes hold-out baseline comparisons in `baseline_comparison.csv`. These compare the selected model against majority-class and stratified-random dummy classifiers, a CMS Overall Star Rating-only logistic model, a same-period ERR rule comparator, and a full-feature Logistic Regression model.
 
